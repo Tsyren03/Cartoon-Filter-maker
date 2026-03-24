@@ -21,8 +21,8 @@ def render_high_contrast_pen(image_path, output_path="cartoon.jpg"):
 
     # Invert the sketch so lines are white and background is black
     darkness = 255 - sketch
-    # Multiply the intensity of the lines 4x darker
-    darker_sketch = cv2.convertScaleAbs(darkness, alpha=4, beta=0)
+    # Multiply the intensity of the lines 10x darker
+    darker_sketch = cv2.convertScaleAbs(darkness, alpha=10, beta=0)
     # Invert back to black lines on a white background
     sketch = 255 - darker_sketch
 
